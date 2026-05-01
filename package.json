@@ -1,0 +1,19 @@
+{
+  "name": "api-cf-workers",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev --ip 0.0.0.0 --port 9000",
+    "deploy": "wrangler deploy",
+    "db:migrate": "wrangler d1 migrations apply api-db --local",
+    "cf-typegen": "wrangler types"
+  },
+  "dependencies": {
+    "hono": "^4.12.15"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260426.1",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.86.0"
+  }
+}

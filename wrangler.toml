@@ -1,0 +1,13 @@
+name = "api-cf-workers"
+main = "src/index.ts"
+compatibility_date = "2024-04-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "api-db"
+database_id = "YOUR_D1_DATABASE_ID"
+
+[vars]
+# Set these via wrangler secret or .dev.vars
+# JWT_PUBLIC_KEY = "-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----"
